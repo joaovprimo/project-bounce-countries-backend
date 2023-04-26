@@ -7,12 +7,13 @@ import axios from "axios";
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3030;
 
 app.use(cors());
 app.use(express.json());
 
 app.use(Routes);
 
-app.listen(process.env.PORT,()=>{
-    console.log(`listening on Port ${process.env.PORT}`);
+app.listen(PORT,()=>{
+    console.log(`listening on Port ${PORT}`);
 })

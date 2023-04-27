@@ -1,8 +1,7 @@
-import express, { application } from "express";
+import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import Routes from "./routes/index.js";
-import axios from "axios";
 
 dotenv.config();
 
@@ -16,4 +15,4 @@ app.use(Routes);
 
 app.listen(PORT,()=>{
     console.log(`listening on Port ${PORT}`);
-})
+});

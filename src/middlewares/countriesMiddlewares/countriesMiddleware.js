@@ -9,7 +9,6 @@ export default function infoCountriesMiddleware (req, res, next){
         { abortEarly: false } ); 
     if(validation.error){
         const errors = validation.error.details.map(det=>det.message);
-        console.log(errors)
         return res.status(httpStatus.BAD_REQUEST).send(errors);
     };
 
